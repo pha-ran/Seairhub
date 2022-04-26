@@ -4,12 +4,16 @@ const path = require('path');
 const fs = require('fs');
 const res = require('express/lib/response');
 const req = require('express/lib/request');
+const bodyParser = require('body-parser');
 
 const app = express();
 const port = 443; // 사용할 포트 번호
 
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
+
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
 app.use("*", (req, res, next) => {
   console.log("req.secure : " + req.secure);
@@ -29,6 +33,10 @@ app.get('/', (req,res,next)=>{
   res.render('index', {
     javascriptkey:'4d36adb8c66f49ef2c999d273ccb2238'
   });
+});
+
+app.post('/', (req,res,next) => {
+  console.log(req.body);
 });
 
 const options = {

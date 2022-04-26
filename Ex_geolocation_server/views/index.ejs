@@ -12,6 +12,11 @@
 </p>
 <div id="map" style="width:500;height:500px;"></div>
 
+<form id = "location" name="location" action="/" method="POST">
+    <input type = hidden name = "latitude">
+    <input type = hidden  name = "longitude">    
+</form>
+
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4d36adb8c66f49ef2c999d273ccb2238"></script>
 <script>
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div
@@ -36,6 +41,9 @@ if (navigator.geolocation) {
         
         // 마커와 인포윈도우를 표시합니다
         displayMarker(locPosition, message);
+        document.getElementById("location").latitude.value = lat; 
+        document.getElementById("location").longitude.value = lon;
+        document.getElementById("location").submit();
       });
     
 } else { // HTML5의 GeoLocation을 사용할 수 없을때 마커 표시 위치와 인포윈도우 내용을 설정합니다
