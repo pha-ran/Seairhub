@@ -30,13 +30,14 @@ app.use("*", (req, res, next) => {
 });
 
 app.get('/', (req,res,next)=>{
-  res.render('index', {
-    javascriptkey:'4d36adb8c66f49ef2c999d273ccb2238'
-  });
+  res.render('index_t', {lat : 0,  lon : 0});
 });
 
 app.post('/', (req,res,next) => {
   console.log(req.body);
+  lat = req.body.lat
+  lon = req.body.lon
+  res.render('index_t', {lat : lat, lon : lon});
 });
 
 const options = {
