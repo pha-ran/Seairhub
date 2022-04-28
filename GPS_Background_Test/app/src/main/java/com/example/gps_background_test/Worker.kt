@@ -5,6 +5,9 @@ import androidx.work.Worker
 import androidx.work.WorkerParameters
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class Worker(context: Context, workerParams: WorkerParameters) : Worker(context, workerParams) {
     private val context_ = context
@@ -25,10 +28,24 @@ class Worker(context: Context, workerParams: WorkerParameters) : Worker(context,
             location.lastLocation.addOnCompleteListener { it ->
                 if (it.isSuccessful) {
                     it.result?.let { location_ ->
-                        val lat = location_.latitude
-                        val lon = location_.longitude
+                        val lat_ = location_.latitude
+                        val lon_ = location_.longitude
 
-                        println("1000 lat : $lat, lon : $lon")
+                        val postInterface = MainActivity.sRetrofit.create(postInterface::class.java)
+                        postInterface.post(locationData(
+                            lat_,
+                            lon_
+                        )).enqueue(object : Callback<BaseResponse> {
+                            override fun onResponse(call: Call<BaseResponse>, response: Response<BaseResponse>) {
+                                println("1000")
+                            }
+
+                            override fun onFailure(call: Call<BaseResponse>, t: Throwable) {
+                                println("4000")
+                            }
+                        })
+
+                        println("1000 lat : $lat_, lon : $lon_")
                     }
                 } else {
                     println("3000 fail")
@@ -37,5 +54,14 @@ class Worker(context: Context, workerParams: WorkerParameters) : Worker(context,
         } catch (err : SecurityException) {
             println("4000 SecurityException")
         }
+    }
+
+
+    fun onPostLocationSuccess(response : BaseResponse) {
+        println(1000)
+    }
+
+    fun onPostLocationFailure(message: String) {
+        println(4000)
     }
 }
