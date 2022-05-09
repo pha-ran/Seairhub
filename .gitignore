@@ -4,6 +4,7 @@ private.key
 certificate.pfx
 node_modules
 
+google-services.json
 
 *.iml
 .gradle
