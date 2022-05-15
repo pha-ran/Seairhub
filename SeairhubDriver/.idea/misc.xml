@@ -3,9 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/layout/activity_main.xml" value="0.3515625" />
+        <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/drawable-v24/bg_line.xml" value="0.2735" />
+        <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/drawable/bg_round_line.xml" value="0.1" />
+        <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/drawable/bg_round_line_gray.xml" value="0.183" />
+        <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/drawable/bnv_menu_list_true.xml" value="0.197" />
+        <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/drawable/ic_baseline_circle_notifications_24.xml" value="0.183" />
+        <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/drawable/ic_baseline_person_pin_24.xml" value="0.197" />
+        <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/drawable/ic_bnv_menu_list_false.xml" value="0.197" />
+        <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/drawable/ic_bnv_menu_list_selector.xml" value="0.183" />
+        <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/drawable/ic_bnv_menu_notification_selector.xml" value="0.183" />
+        <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/drawable/ic_bnv_menu_notifications_false.xml" value="0.197" />
+        <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/drawable/ic_bnv_menu_notifications_true.xml" value="0.197" />
+        <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/drawable/ic_bnv_menu_person_false.xml" value="0.197" />
+        <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/drawable/ic_bnv_menu_person_selector.xml" value="0.197" />
+        <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/drawable/ic_bnv_menu_person_true.xml" value="0.197" />
+        <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/drawable/ic_tb_back.xml" value="0.2735" />
+        <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/layout/activity_main.xml" value="0.32189973614775724" />
         <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/layout/activity_splash.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/layout/dialog_loading.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/layout/fragment_list.xml" value="0.30055579307396324" />
+        <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/layout/fragment_my_info.xml" value="0.30055579307396324" />
+        <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/layout/fragment_notifications.xml" value="0.30055579307396324" />
+        <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/layout/item_list.xml" value="0.2997007268063275" />
+        <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/layout/item_notification.xml" value="0.264" />
+        <entry key="..\:/Users/pha-r/Desktop/Subject/CooperativeProjrct1/seaairhub/Ex_location/SeairhubDriver/app/src/main/res/menu/bnv_menu.xml" value="0.29674968341072183" />
       </map>
     </option>
   </component>
