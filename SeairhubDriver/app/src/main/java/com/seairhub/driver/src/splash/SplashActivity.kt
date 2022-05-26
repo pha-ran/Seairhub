@@ -6,6 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.messaging.FirebaseMessaging
+import com.seairhub.driver.config.ApplicationClass
 import com.seairhub.driver.config.BaseActivity
 import com.seairhub.driver.databinding.ActivitySplashBinding
 import com.seairhub.driver.src.main.MainActivity
@@ -24,8 +25,8 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>(ActivitySplashBinding
                     return@OnCompleteListener
                 }
 
-                val token = it.result
-                println("Refreshed token : $token")
+                ApplicationClass.messageToken = it.result
+                println("Refreshed token : ${ApplicationClass.messageToken}")
 
                 // 토큰 처리
             })

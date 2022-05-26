@@ -2,7 +2,6 @@ package com.seairhub.driver.config
 
 import android.app.Application
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatDelegate
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -25,20 +24,23 @@ class ApplicationClass : Application() {
 
         // Retrofit 인스턴스, 앱 실행시 한번만 생성하여 사용
         lateinit var sRetrofit: Retrofit
+
+        // FCM 메세지 토큰
+        lateinit var messageToken: String
     }
 
     // 앱이 처음 생성되는 순간, SP를 새로 만들어주고, 레트로핏 인스턴스를 생성
     override fun onCreate() {
         super.onCreate()
-        // 다크 모드 비활성화
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-        sSharedPreferences =
-            applicationContext.getSharedPreferences("sp_seairhub_driver", MODE_PRIVATE)
-        // 레트로핏 인스턴스 생성
-        initRetrofitInstance()
+        // SharedPreferences 생성
+        sSharedPreferences = applicationContext.getSharedPreferences("sp_seairhub_driver", MODE_PRIVATE)
+
         // User Idx 초기화
         sSharedPreferences.edit().putInt(User_Idx, -1).apply()
         println("유저 아이디 초기화 : " + sSharedPreferences.getInt(User_Idx, -1))
+
+        // 레트로핏 인스턴스 생성
+        initRetrofitInstance()
     }
 
     // 레트로핏 인스턴스를 생성, 레트로핏에 각종 설정값들을 지정
