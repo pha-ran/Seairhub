@@ -5,6 +5,11 @@ const fs = require('fs');
 const res = require('express/lib/response');
 const req = require('express/lib/request');
 const bodyParser = require('body-parser');
+var admin = require("firebase-admin");
+var serviceAccount = require("./seairhubdriver-firebase-adminsdk.json");
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
 
 const app = express();
 const port = 443; // 사용할 포트 번호
@@ -33,12 +38,32 @@ app.get('/', (req,res,next)=>{
   res.render('index_t', {lat : 0,  lon : 0});
 });
 
-app.post('/', (req,res,next) => {
+app.post('/', (req, res, next) => {
   console.log(req.body);
   lat = req.body.lat
   lon = req.body.lon
   res.render('index_t', {lat : lat, lon : lon});
 });
+
+app.post('/send-message', (req, res, next) => {
+  admin.messaging().send(req.body)
+  .then((response) => {
+    console.log('Successfully sent message : ', response)
+    return res.status(200).json({
+      isSuccess : true,
+      code : 200,
+      message : "Successfully sent message"
+    })
+  })
+  .catch((err) => {
+    console.log('Error Sending message : ', err)
+    return res.status(400).json({
+      isSuccess : false,
+      code : 400,
+      message : "Error Sending message"
+    })
+  });
+})
 
 const options = {
   cert: fs.readFileSync(__dirname + '/certificate.crt'),

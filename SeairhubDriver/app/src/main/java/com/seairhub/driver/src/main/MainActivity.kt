@@ -1,12 +1,13 @@
 package com.seairhub.driver.src.main
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.seairhub.driver.R
 import com.seairhub.driver.config.BaseActivity
 import com.seairhub.driver.databinding.ActivityMainBinding
 import com.seairhub.driver.src.main.list.ListFragment
-import com.seairhub.driver.src.main.list.models.ListItemData
+import com.seairhub.driver.src.main.list.deliveryinfo.DeliveryInfoActivity
 import com.seairhub.driver.src.main.myinfo.MyInfoFragment
 import com.seairhub.driver.src.main.notifications.NotificationsFragment
 
@@ -48,5 +49,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
         setSupportActionBar(binding.toolbar)
         //supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         //supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_tb_back)
+    }
+
+    fun startDeliveryInfo() {
+        startActivity(Intent(this, DeliveryInfoActivity::class.java))
     }
 }

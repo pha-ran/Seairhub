@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.RequestManager
 import com.seairhub.driver.R
@@ -36,6 +35,8 @@ class ListFragment : BaseFragment<FragmentListBinding>(FragmentListBinding::bind
         adaptor.setItemClickListener(object : ListAdaptor.OnItemClickListener {
             override fun onItemClick(view: View, position: Int) {
                 println("onClick : $position")
+
+                (activity as MainActivity).startDeliveryInfo()
             }
         })
 
