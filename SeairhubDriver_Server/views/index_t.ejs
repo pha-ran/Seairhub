@@ -23,23 +23,23 @@
 	var resultInfoArr2 = [];
 	var defaultRouteResult;
 
-	var lat = "<%= lat%>";
-	var lon = "<%= lon%>";
+	var lat_s = "<%= lat_s%>";
+	var lon_s = "<%= lon_s%>";
 
 	// 임시 기본 위치를 학교로 설정
-	if (lat == 0 && lon == 0) {
-		lat = 37.5994
-		lon = 126.8651
+	if (lat_s == 0 && lon_s == 0) {
+		lat_s = 37.5994
+		lon_s = 126.8651
 	}
 
-	// HTML5의 geolocation으로 사용할 수 있는지 확인합니다 
-	if (navigator.geolocation) {
-		// GeoLocation을 이용해서 접속 위치를 얻어옵니다
-		navigator.geolocation.getCurrentPosition(function(position) {
-			lat = position.coords.latitude; // 위도
-			lon = position.coords.longitude; // 경도
-		});
-	}
+	// // HTML5의 geolocation으로 사용할 수 있는지 확인합니다 
+	// if (navigator.geolocation) {
+	// 	// GeoLocation을 이용해서 접속 위치를 얻어옵니다
+	// 	navigator.geolocation.getCurrentPosition(function(position) {
+	// 		lat_s = position.coords.latitude; // 위도
+	// 		lon_s = position.coords.longitude; // 경도
+	// 	});
+	// }
 
 	function initTmap() {
 		// 1. 지도 띄우기
@@ -71,7 +71,7 @@
 							// 2. 시작, 도착 심볼찍기
 							// 시작
 							marker_s = new Tmapv2.Marker({
-								position : new Tmapv2.LatLng(lat, lon),
+								position : new Tmapv2.LatLng(lat_s, lon_s),
 								icon : "http://tmapapi.sktelecom.com/upload/tmap/marker/pin_r_m_s.png",
 								iconSize : new Tmapv2.Size(24, 38),
 								map : map
@@ -86,8 +86,8 @@
 										async : false,
 										data : {
 											"appKey" : "l7xxeb4d570353e54f0da45c521b4607c944",
-											"startX" : lon,
-											"startY" : lat,
+											"startX" : lon_s,
+											"startY" : lat_s,
 											"endX" : "126.932661",
 											"endY" : "37.520287",
 											"reqCoordType" : "WGS84GEO",
@@ -191,8 +191,8 @@
 													async : false,
 													data : {
 														"appKey" : "l7xxeb4d570353e54f0da45c521b4607c944",
-														"startX" : lon,
-														"startY" : lat,
+														"startX" : lon_s,
+														"startY" : lat_s,
 														"endX" : "126.932661",
 														"endY" : "37.520287",
 														"reqCoordType" : "WGS84GEO",

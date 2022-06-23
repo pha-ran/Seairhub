@@ -2,6 +2,8 @@ package com.seairhub.driver.src.main.list.deliveryinfo
 
 import android.os.Bundle
 import android.view.View
+import androidx.lifecycle.ViewModelProvider
+import androidx.work.WorkManager
 import com.seairhub.driver.R
 import com.seairhub.driver.config.ApplicationClass
 import com.seairhub.driver.config.BaseFragment
@@ -11,6 +13,8 @@ import com.seairhub.driver.src.main.list.deliveryinfo.models.NotificationRequest
 import com.seairhub.driver.src.main.list.deliveryinfo.models.NotificationResponse
 
 class DeliveryInfoFragment : BaseFragment<FragmentDeliveryInfoBinding>(FragmentDeliveryInfoBinding::bind, R.layout.fragment_delivery_info), NotificationView {
+    private lateinit var viewModel: LocationViewModel
+    private lateinit var workManager: WorkManager
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -19,6 +23,20 @@ class DeliveryInfoFragment : BaseFragment<FragmentDeliveryInfoBinding>(FragmentD
     }
 
     private fun set() {
+        binding.buttonDeparture.setOnClickListener { // 배송 출발 버튼
+            showLoadingDialog(requireContext())
+
+            viewModel = ViewModelProvider(this).get(LocationViewModel::class.java)
+
+            activity?.let {
+                workManager = WorkManager.getInstance(it)
+            }
+
+            viewModel.startWorkRequests(workManager)
+
+            dismissLoadingDialog()
+        }
+
         binding.buttonDelay.setOnClickListener {
             sendMessage()
         }
