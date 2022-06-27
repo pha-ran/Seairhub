@@ -40,16 +40,16 @@ class ListFragment : BaseFragment<FragmentListBinding>(FragmentListBinding::bind
             }
         })
 
-        listItems.add(ListItemData("22/05/13", "장소1", "화주1", "상차 대기"))
-        listItems.add(ListItemData("22/05/13", "장소2", "화주2", "운송중"))
-        listItems.add(ListItemData("22/05/12", "장소3", "화주3", "운송 완료"))
-        listItems.add(ListItemData("22/05/08", "장소4", "화주4", "운송 완료"))
-        listItems.add(ListItemData("22/05/08", "장소5", "화주5", "운송 완료"))
-        listItems.add(ListItemData("22/05/07", "장소6", "화주6", "운송 완료"))
-        listItems.add(ListItemData("22/05/06", "장소7", "화주7", "운송 완료"))
-        listItems.add(ListItemData("22/05/06", "장소8", "화주8", "운송 완료"))
-        listItems.add(ListItemData("22/05/06", "장소9", "화주9", "운송 완료"))
-        listItems.add(ListItemData("22/05/05", "장소10", "화주10", "운송 완료"))
+        listItems.add(ListItemData("22\n05/13", "장소1", "화주1", "상차\n대기"))
+        listItems.add(ListItemData("22\n05/13", "장소2", "화주2", "운송중"))
+        listItems.add(ListItemData("22\n05/12", "장소3", "화주3", "운송\n완료"))
+        listItems.add(ListItemData("22\n05/08", "장소4", "화주4", "운송\n완료"))
+        listItems.add(ListItemData("22\n05/08", "장소5", "화주5", "운송\n완료"))
+        listItems.add(ListItemData("22\n05/07", "장소6", "화주6", "운송\n완료"))
+        listItems.add(ListItemData("22\n05/06", "장소7", "화주7", "운송\n완료"))
+        listItems.add(ListItemData("22\n05/06", "장소8", "화주8", "운송\n완료"))
+        listItems.add(ListItemData("22\n05/06", "장소9", "화주9", "운송\n완료"))
+        listItems.add(ListItemData("22\n05/05", "장소10", "화주10", "운송\n완료"))
         adaptor.notifyDataSetChanged()
     }
 }

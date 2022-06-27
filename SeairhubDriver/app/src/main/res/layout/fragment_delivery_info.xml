@@ -35,7 +35,7 @@
                         android:gravity="center"
                         android:text="NO."
                         android:textStyle="bold"
-                        android:textSize="18sp"
+                        android:textSize="28sp"
                         android:textColor="@color/black"/>
 
                     <TextView
@@ -47,7 +47,7 @@
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:text="1235485584"
-                        android:textSize="18sp"
+                        android:textSize="28sp"
                         android:textColor="@color/black"/>
                 </LinearLayout>
 
@@ -65,7 +65,7 @@
                         android:gravity="center"
                         android:text="배송일"
                         android:textStyle="bold"
-                        android:textSize="18sp"
+                        android:textSize="28sp"
                         android:textColor="@color/black"/>
 
                     <TextView
@@ -77,7 +77,7 @@
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:text="22/05/04"
-                        android:textSize="18sp"
+                        android:textSize="28sp"
                         android:textColor="@color/black"/>
                 </LinearLayout>
 
@@ -95,7 +95,7 @@
                         android:gravity="center"
                         android:text="화주정보"
                         android:textStyle="bold"
-                        android:textSize="18sp"
+                        android:textSize="28sp"
                         android:textColor="@color/black"/>
 
                     <TextView
@@ -107,7 +107,7 @@
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:text="화주1"
-                        android:textSize="18sp"
+                        android:textSize="28sp"
                         android:textColor="@color/black"/>
                 </LinearLayout>
 
@@ -125,7 +125,7 @@
                         android:gravity="center"
                         android:text="출발시간"
                         android:textStyle="bold"
-                        android:textSize="18sp"
+                        android:textSize="28sp"
                         android:textColor="@color/black"/>
 
                     <TextView
@@ -136,8 +136,8 @@
                         android:layout_margin="16dp"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:text="22/04/29 13:11:15"
-                        android:textSize="18sp"
+                        android:text="22/04/29\n13:11:15"
+                        android:textSize="28sp"
                         android:textColor="@color/black"/>
                 </LinearLayout>
 
@@ -155,7 +155,7 @@
                         android:gravity="center"
                         android:text="도착시간"
                         android:textStyle="bold"
-                        android:textSize="18sp"
+                        android:textSize="28sp"
                         android:textColor="@color/black"/>
 
                     <TextView
@@ -166,8 +166,8 @@
                         android:layout_margin="16dp"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:text="22/04/30 15:50:25"
-                        android:textSize="18sp"
+                        android:text="22/04/30\n15:50:25"
+                        android:textSize="28sp"
                         android:textColor="@color/black"/>
                 </LinearLayout>
 
@@ -185,7 +185,7 @@
                         android:gravity="center"
                         android:text="배송상태"
                         android:textStyle="bold"
-                        android:textSize="18sp"
+                        android:textSize="28sp"
                         android:textColor="@color/black"/>
 
                     <TextView
@@ -196,8 +196,8 @@
                         android:layout_margin="16dp"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:text="배송완료"
-                        android:textSize="18sp"
+                        android:text="상차 대기"
+                        android:textSize="28sp"
                         android:textColor="@color/black"/>
                 </LinearLayout>
             </LinearLayout>
@@ -207,7 +207,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="배송 출발"
-                android:textSize="16sp"
+                android:textSize="26sp"
                 android:textColor="@color/black"/>
 
             <Button
@@ -215,7 +215,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="배송 지연 알림"
-                android:textSize="16sp"
+                android:textSize="26sp"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/button_picture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="사진 전송"
+                android:textSize="26sp"
                 android:textColor="@color/black"/>
 
             <Button
@@ -223,7 +231,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="배송 완료"
-                android:textSize="16sp"
+                android:textSize="26sp"
                 android:textColor="@color/black"/>
         </LinearLayout>
     </ScrollView>

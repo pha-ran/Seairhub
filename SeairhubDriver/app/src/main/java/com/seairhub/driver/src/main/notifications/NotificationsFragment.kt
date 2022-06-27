@@ -38,16 +38,16 @@ class NotificationsFragment : BaseFragment<FragmentNotificationsBinding>(Fragmen
             }
         })
 
-        notificationItems.add(NotificationItemData("운송업체", "제목1", "알림내용1", "10:22"))
-        notificationItems.add(NotificationItemData("운송업체", "제목2", "알림내용2", "1일 전"))
-        notificationItems.add(NotificationItemData("화주", "제목3", "알림내용3", "1일 전"))
-        notificationItems.add(NotificationItemData("운송업체", "제목4", "알림내용4", "3일 전"))
-        notificationItems.add(NotificationItemData("화주", "제목5", "알림내용5", "4일 전"))
-        notificationItems.add(NotificationItemData("화주", "제목6", "알림내용6", "5일 전"))
-        notificationItems.add(NotificationItemData("화주", "제목7", "알림내용7", "6일 전"))
-        notificationItems.add(NotificationItemData("운송업체", "제목8", "알림내용8", "6일 전"))
-        notificationItems.add(NotificationItemData("운송업체", "제목9", "알림내용9", "7일 전"))
-        notificationItems.add(NotificationItemData("운송업체", "제목10", "알림내용10", "7일 전"))
+        notificationItems.add(NotificationItemData("운송\n업체", "제목1", "알림내용1", "10:22"))
+        notificationItems.add(NotificationItemData("운송\n업체", "제목2", "알림내용2", "1일"))
+        notificationItems.add(NotificationItemData("화주", "제목3", "알림내용3", "1일"))
+        notificationItems.add(NotificationItemData("운송\n업체", "제목4", "알림내용4", "3일"))
+        notificationItems.add(NotificationItemData("화주", "제목5", "알림내용5", "4일"))
+        notificationItems.add(NotificationItemData("화주", "제목6", "알림내용6", "5일"))
+        notificationItems.add(NotificationItemData("화주", "제목7", "알림내용7", "6일"))
+        notificationItems.add(NotificationItemData("운송\n업체", "제목8", "알림내용8", "6일"))
+        notificationItems.add(NotificationItemData("운송\n업체", "제목9", "알림내용9", "7일"))
+        notificationItems.add(NotificationItemData("운송\n업체", "제목10", "알림내용10", "7일"))
         adaptor.notifyDataSetChanged()
     }
 }

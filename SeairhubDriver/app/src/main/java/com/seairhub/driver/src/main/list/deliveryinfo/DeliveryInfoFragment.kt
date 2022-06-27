@@ -1,6 +1,8 @@
 package com.seairhub.driver.src.main.list.deliveryinfo
 
+import android.content.Intent
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import androidx.work.WorkManager
@@ -35,10 +37,20 @@ class DeliveryInfoFragment : BaseFragment<FragmentDeliveryInfoBinding>(FragmentD
             viewModel.startWorkRequests(workManager)
 
             dismissLoadingDialog()
+
+            showCustomToast("배송이 시작되었습니다.")
         }
 
-        binding.buttonDelay.setOnClickListener {
-            sendMessage()
+        binding.buttonDelay.setOnClickListener { // 배송 지연 알림
+            sendMessage("배송 기사가 메세지를 보냈습니다.", "배송이 지연될 것으로 예상됩니다. 자세한 사항은 앱에서 확인해주세요.")
+        }
+
+        binding.buttonPicture.setOnClickListener { // 사진 업로드
+            (activity as DeliveryInfoActivity).openGallery()
+        }
+
+        binding.buttonArrival.setOnClickListener { // 배송 도착 알림
+            sendMessage("배송 기사가 메세지를 보냈습니다.", "배송이 완료되었습니다.")
         }
     }
 
@@ -52,11 +64,10 @@ class DeliveryInfoFragment : BaseFragment<FragmentDeliveryInfoBinding>(FragmentD
         showCustomToast(message)
     }
 
-    private fun sendMessage() {
+    private fun sendMessage(t : String, b : String) {
         showLoadingDialog(requireContext())
         NotificationService(this).tryPostNotification(
-            // ToDo
-            NotificationRequest(ApplicationClass.messageToken, NotificationData("배송 기사가 메세지를 보냈습니다.", "배송이 지연될 것으로 예상됩니다. 자세한 사항은 앱에서 확인해주세요."))
+            NotificationRequest(ApplicationClass.messageToken, NotificationData(t, b))
         )
     }
 }
